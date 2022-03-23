@@ -1,0 +1,125 @@
+.App {
+	text-align: center;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.container {
+	padding: 10px 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	width: 300px;
+	height: auto;
+	margin-top: 20px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+/* section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.topSection {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.tnxList {
+	display: flex;
+	flex-direction: column;
+	font-weight: 500;
+}
+.input {
+	margin-top: 5px;
+	padding: 8px 8px;
+	border: 0.5px solid #9d50c77c;
+	outline: none;
+	border-radius: 10px;
+}
+.resultSection {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.expense {
+	padding: 10px 10px;
+	border: 1px solid #9d50c77c;
+	border-radius: 20px;
+	width: 150px;
+	height: 100px;
+	margin-right: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.expense span {
+	color: red;
+	font-weight: bold;
+}
+.income span {
+	color: green;
+	font-weight: bold;
+}
+
+.income {
+	padding: 10px 10px;
+	border: 1px solid #9d50c77c;
+	border-radius: 20px;
+	width: 150px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+}
+.balance span {
+	font-weight: bold;
+	color: rgb(0, 119, 255);
+	margin-left: 10px;
+}
+.balance {
+	font-weight: 500;
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	padding: 5px 12px;
+	border: 1px solid #9d50c7;
+	color: #9d50c7;
+	border-radius: 5px;
+	background-color: #f3eaf5;
+	margin-top: 10px;
+}
+.cancel {
+	/* padding: 10px 12px; */
+	border: 1px solid #c75050;
+	color: #c75050;
+	border-radius: 5px;
+	background-color: #f7dcea;
+}
+
+.transaction {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 500;
+	border-radius: 5px;
+	margin: 10px 5px;
+	background-color: rgb(229, 226, 226);
+	padding: 10px 10px;
+	border-right: 2px solid green;
+}
+header h2 {
+	margin-top: 10px;
+	color: rgba(103, 95, 250, 0.754);
+}
