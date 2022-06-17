@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
-const TranseActionComponent = ({ transaction }) => {
+import { FaTrashAlt } from "react-icons/fa"; 
+const TranseActionComponent = ({ transaction,DeleteTnx }) => {
   const [searchItem, setSearchItem] = useState("");
   const [filterTnx, setFilterTnx] = useState(transaction);
 
@@ -21,6 +21,13 @@ setFilterTnx(filtered);
 filterTransactions(searchItem);
   },[transaction])
 
+  if (!transaction.length)
+  return (
+    <div className="textTip"><h3>Click On 'Add' Button To Add Transaction</h3>
+    <p className="text-stone-400 font-medium">Developed By <a href="https://github.com/khorshidhoseiny" target="_blank" rel="noreferrer">khorshid Hoseiny</a></p>
+    </div>
+  );
+ 
   return (
     <section className="tnxList">
       <input className="input" type="text" value={searchItem} onChange={changehandler} placeholder="Search ..." />
@@ -33,9 +40,11 @@ filterTransactions(searchItem);
             >
               <span> {t.desc}</span>
               <span> ${t.amount}</span>
-            </div>
+              <button onClick={() => DeleteTnx(t.id)} className="text-red-400 pt-2"><FaTrashAlt/></button>
+              </div>
+            
           ))
-        : "add some transaction!"}
+        : <p style={{display:"flex",color:'#3837384d',justifyContent:'center',alignItems:'center'}}>Add some transaction</p>}
     </section>
   );
 };

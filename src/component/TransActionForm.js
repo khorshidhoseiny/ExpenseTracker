@@ -17,7 +17,7 @@ const TransActionForm = ({ addTransAction }) => {
   };
   return (
     <form onSubmit={submitHandler}>
-      <div>
+      <div style={{width:'100%',display:"flex",flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
         <input
           placeholder="Description..."
           className="input"
@@ -42,7 +42,7 @@ const TransActionForm = ({ addTransAction }) => {
           onChange={changeHandler}
           checked={formValues.type === "expense"}
         />
-        <label>Expense</label>
+        <label style={{fontWeight:500,color:"#313131"}}>Expense</label>
         <input
           type="radio"
           value="Income"
@@ -50,7 +50,7 @@ const TransActionForm = ({ addTransAction }) => {
           onChange={changeHandler}
           checked={formValues.type === "Income"}
         />
-        <label>Income</label>
+        <label  style={{fontWeight:500,color:"#313131"}}>Income</label>
       </div>
       <button className="btn" type="submit">Add TransAction</button>
     </form>

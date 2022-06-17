@@ -1,14 +1,26 @@
 import "./App.css";
 import ExpenseApp from "./component/ExpenseApp";
+import { ToastProvider } from "react-toast-notifications";
+import Typewriter from "typewriter-effect";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h2>Expense App</h2>
-      </header>
-      <ExpenseApp/>
-
+      <ToastProvider>
+        <header className="headerText">
+        <Typewriter
+          options={{
+            strings: [
+              "Expense Tracker",
+            ],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+         
+        </header>
+        <ExpenseApp />
+      </ToastProvider>
     </div>
   );
 }
